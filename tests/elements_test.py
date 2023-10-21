@@ -31,6 +31,5 @@ class TestElements:
             print()
             print(input_checkboxes)
             print(output_results)
-
             assert input_checkboxes == output_results
 
