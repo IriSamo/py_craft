@@ -29,3 +29,10 @@ class CheckBoxPageLocators:
 # svg[class="rct-icon rct-icon-check"]
 # //span[@class="rct-title"]
 #./following::span[@class="rct-title"]
+
+class RadioButtonPageLocators:
+    YES_RADIO_BUTTON = (By.ID, 'yesRadio')
+    YES_BUTTON = (By.XPATH, '//input[@id="yesRadio"]/following-sibling::label')
+    IMPRESSIVE_RADIO_BUTTON = (By.ID, 'impressiveRadio')
+    SELECTED_RADIO_BUTTON = (By.CLASS_NAME, 'text-success')
+    NO_RADIO_BUTTON = (By.ID, 'noRadio')

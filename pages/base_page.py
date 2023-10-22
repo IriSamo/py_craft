@@ -1,5 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 
 
 class BasePage:
@@ -33,3 +34,9 @@ class BasePage:
 
     def scroll_down(self):
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+    def actions_click(self, element):
+        (ActionChains(self.driver)
+         .move_to_element(element)
+         .click()
+         .perform())
